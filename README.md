@@ -1,2 +1,2 @@
-# dragon24
-An ESL word scramble web browser game
+# Dragon Fruit Delight
+A word scramble web browser game
