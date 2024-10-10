@@ -1,3 +1,4 @@
+
 # Dragon Fruit Delight: A Word Scramble Saga
 
 Welcome to Dragon Fruit Delight, the web browser word scramble game brought to you by "The Dragon 24 Team"! But how did this project come to be?
@@ -24,7 +25,3 @@ Hi everybody, I’m Jim, a passionate learner with a love for technology and new
 
 ### Ruth
 Hey, I am Ruth. I am working towards full stack development on The Odin Project. I have developed a passion for coding, and I want to learn more by doing things as well as learning from others! You can find me on Twitter/X at [lemonxx13](https://twitter.com/lemonxx13) and on GitHub at [ruth-chirwa](https://github.com/ruth-chirwa).
-
----
-
- 

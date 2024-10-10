@@ -40,4 +40,3 @@ function checkAnswer() {
 window.onload = function() {
   displayScrambledWord();
 };
-
