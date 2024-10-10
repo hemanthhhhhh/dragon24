@@ -68,3 +68,48 @@ ol {
 li {
   margin-bottom: 10px;
 }
+
+/* CSS to center the video and make it responsive */
+.video-container {
+  max-width: 800px; /* Set maximum width */
+  margin: 0 auto; /* Center the video */
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the custom video controls container */
+.custom-video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none; /* Prevent blocking video interactions */
+}
+
+.play-pause-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #1382cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.play-pause-btn:hover {
+  background-color: #1382cc;
+}
