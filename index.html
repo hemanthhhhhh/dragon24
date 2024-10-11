@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="style.css">    
   </head>
   <body>
-    <h1>Welcome to the Dragon Fruit Delight Word Scramble Game!</h1>
-    <p>Unscramble the letters to form a word.</p>
+     <!-- Introductory Video Section -->
+    <div id="video-container">
+      <video id="intro-video" src="intro.mp4" type="video/mp4"></video>
+      <div id="video-controls">
+        <button id="play-pause">Play</button>
+      </div>
+    </div>
 
-    <p id="scrambled-word"></p>
-    <input type="text" id="user-input" />
-    <button onclick="checkAnswer()">Check Answer</button>
-    <p id="result"></p>
-    <p><strong>How to Play:</strong></p>
-    <ol>
-      <li>A scrambled word will appear on the screen.</li>
-      <li>Type the unscrambled word into the text field.</li>
-      <li>Click the "Check Answer" button.</li>
-      <li>
-        If your answer is correct, you'll see a success message, and a new
-        scrambled word will appear.
-      </li>
-      <li>
-        If your answer is incorrect, you'll see a message asking you to try
-        again.
-      </li>
-    </ol>
+    <!-- Game Content -->
+    <div id="game-content">
+      <h1>Welcome to the Dragon Fruit Delight Word Scramble Game!</h1>
+      <p>Unscramble the letters to form a word.</p>
+
+      <p id="scrambled-word"></p>
+      <input type="text" id="user-input" />
+      <button onclick="checkAnswer()">Check Answer</button>
+      <p id="result"></p>
+      <p><strong>How to Play:</strong></p>
+      <ol>
+        <li>A scrambled word will appear on the screen.</li>
+        <li>Type the unscrambled word into the text field.</li>
+        <li>Click the "Check Answer" button.</li>
+        <li>
+          If your answer is correct, you'll see a success message, and a new
+          scrambled word will appear.
+        </li>
+        <li>
+          If your answer is incorrect, you'll see a message asking you to try
+          again.
+        </li>
+      </ol>
+    </div>
     <script src=""></script>
     <!--      const words = ["apple", "banana", "orange", "grape", "kiwi" "dragon fruit" "water melon" "pine apple" "cherry" "pomegranate"]; -->
   </body>
