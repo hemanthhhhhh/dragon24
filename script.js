@@ -40,3 +40,15 @@ function checkAnswer() {
 window.onload = function() {
   displayScrambledWord();
 };
+
+document.getElementById('play-pause-btn').addEventListener('click', function () {
+  const video = document.getElementById('intro-video');
+  
+  if (video.paused) {
+    video.play();
+    this.textContent = 'Pause';
+  } else {
+    video.pause();
+    this.textContent = 'Play';
+  }
+});
