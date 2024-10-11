@@ -43,11 +43,11 @@ window.onload = function() {
 
 // New Video Functionality
 
-// Get elements
-const videoContainer = document.getElementById("video-container");
+// Get video elements
+const videoOverlay = document.getElementById("video-overlay");
 const introVideo = document.getElementById("intro-video");
 const playPauseButton = document.getElementById("play-pause");
-const gameContent = document.getElementById("game-content");
+const closeVideoButton = document.getElementById("close-video");
 
 // Function to toggle play/pause
 function togglePlayPause() {
@@ -60,23 +60,26 @@ function togglePlayPause() {
   }
 }
 
+// Function to close the video overlay
+function closeVideo() {
+  introVideo.pause();
+  videoOverlay.style.display = "none";
+}
+
 // Event listener for play/pause button
 playPauseButton.addEventListener("click", togglePlayPause);
 
-// When video ends, hide the video container and show the game
+// Event listener for close button
+closeVideoButton.addEventListener("click", closeVideo);
+
+// When video ends, automatically close the overlay
 introVideo.addEventListener("ended", () => {
-  videoContainer.style.display = "none";
-  gameContent.style.display = "block";
+  videoOverlay.style.display = "none";
 });
 
-// Optionally, show the game content when the user skips the video
-// For simplicity, we'll show the game after the video ends
-
-// Show game content if the video is already played (e.g., user refreshes)
-introVideo.addEventListener("play", () => {
-  gameContent.style.display = "none";
+// Optional: Autoplay the video when the overlay appears
+window.addEventListener("load", () => {
+  introVideo.play();
+  playPauseButton.textContent = "Pause";
 });
 
-introVideo.addEventListener("pause", () => {
-  // You can add logic here if needed when the video is paused
-});
