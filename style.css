@@ -68,3 +68,53 @@ ol {
 li {
   margin-bottom: 10px;
 }
+
+
+/* CSS to center the video and make it responsive with a 16:9 aspect ratio */
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the container without distortion */
+}
+
+/* Style the custom video controls */
+.custom-video-controls {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: auto;
+}
+
+.play-pause-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #1382cc; /* Use blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.play-pause-btn:hover {
+  background-color: #0d6fb1;
+}
+
+}

@@ -40,3 +40,22 @@ function checkAnswer() {
 window.onload = function() {
   displayScrambledWord();
 };
+
+// Get the video element and the play/pause button
+const video = document.getElementById('intro-video');
+const playPauseBtn = document.getElementById('play-pause-btn');
+
+// Function to toggle between play and pause
+function togglePlayPause() {
+    if (video.paused || video.ended) {
+        video.play();
+        playPauseBtn.textContent = 'Pause';
+    } else {
+        video.pause();
+        playPauseBtn.textContent = 'Play';
+    }
+}
+
+// Add click event listener to the button
+playPauseBtn.addEventListener('click', togglePlayPause);
+
