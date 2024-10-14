@@ -41,14 +41,21 @@ window.onload = function() {
   displayScrambledWord();
 };
 
-document.getElementById('play-pause-btn').addEventListener('click', function () {
-  const video = document.getElementById('intro-video');
-  
-  if (video.paused) {
-    video.play();
-    this.textContent = 'Pause';
-  } else {
-    video.pause();
-    this.textContent = 'Play';
-  }
-});
+// Get the video element and the play/pause button
+const video = document.getElementById('intro-video');
+const playPauseBtn = document.getElementById('play-pause-btn');
+
+// Function to toggle between play and pause
+function togglePlayPause() {
+    if (video.paused || video.ended) {
+        video.play();
+        playPauseBtn.textContent = 'Pause';
+    } else {
+        video.pause();
+        playPauseBtn.textContent = 'Play';
+    }
+}
+
+// Add click event listener to the button
+playPauseBtn.addEventListener('click', togglePlayPause);
+
